@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"Version": 100,
+	"VersionName": "1.0.0",
+	"FriendlyName": "Index",
+	"Description": "Persistent manual actor and folder hierarchy ordering for the World Outliner.",
+	"Category": "Editor",
+	"CreatedBy": "Mippithedork",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "Index",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	],
+	"EngineVersion": "5.8.0"
+}
