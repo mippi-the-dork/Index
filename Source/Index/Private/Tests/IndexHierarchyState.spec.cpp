@@ -1,3 +1,5 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #include "Misc/AutomationTest.h"
 #include "IndexSequenceState.h"
 #include "Engine/World.h"

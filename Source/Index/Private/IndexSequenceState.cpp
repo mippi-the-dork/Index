@@ -1,3 +1,5 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #include "IndexSequenceState.h"
 
 #include "Editor.h"

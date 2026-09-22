@@ -1,3 +1,5 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #include "IndexLineOverlay.h"
 
 #include "Framework/Application/SlateApplication.h"

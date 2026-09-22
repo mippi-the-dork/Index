@@ -1,3 +1,5 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #include "IndexInteraction.h"
 
 #include "Editor.h"
