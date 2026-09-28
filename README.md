@@ -1251,7 +1251,7 @@ Index is intended to remain focused on manual World Outliner organization and hi
 
 Index is distributed under the **MIT License**.
 
-See `[LICENSE](https://chatgpt.com/c/LICENSE)` for details.
+See `[LICENSE]` for details.
 
 ---
 
