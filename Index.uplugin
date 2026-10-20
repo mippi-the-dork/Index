@@ -4,7 +4,7 @@
 	"VersionName": "1.0.0",
 	"FriendlyName": "Index",
 	"Description": "Persistent manual actor and folder hierarchy ordering for the World Outliner.",
-	"Category": "Editor",
+	"Category": "World Outliner",
 	"CreatedBy": "Mippithedork",
 	"CreatedByURL": "",
 	"DocsURL": "",
