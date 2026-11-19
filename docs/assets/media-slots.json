@@ -1,5 +1,60 @@
 {
   "placeholder": "assets/media-placeholder.png",
   "note": "A planned image is a still screenshot/diagram; gif is an animated demonstration. Capture instructions are also shown below the figure in the public documentation.",
-  "slots": []
+  "slots": [
+    {
+      "id": "overview-ordering",
+      "kind": "image",
+      "page": "01-getting-started/overview/DESIGN.md",
+      "alt": "World Outliner showing a manually ordered mixture of Actors and Folders",
+      "caption": "Manual Outliner ordering keeps labels meaningful while allowing a custom visual sequence.",
+      "capture_instructions": "Capture the standard Unreal World Outliner with an intentionally nonalphabetical order mixing at least two Actors and two Folders in one tier. Include the Index drag insertion line or custom ordering result, but do not show a separate Index application.",
+      "final_asset": "assets/media/overview-ordering.png"
+    },
+    {
+      "id": "installation-folder",
+      "kind": "image",
+      "page": "01-getting-started/installation/DESIGN.md",
+      "alt": "Index plugin directory correctly installed in an Unreal project",
+      "caption": "A correctly installed Index folder contains the plugin descriptor directly beneath the project’s Plugins directory.",
+      "capture_instructions": "Capture File Explorer showing YourProject/Plugins/Index in the address bar, with Index.uplugin, Source, Resources, Config and Doc visible. Avoid showing a nested Index/Index folder.",
+      "final_asset": "assets/media/installation-folder.png"
+    },
+    {
+      "id": "quickstart-force",
+      "kind": "gif",
+      "page": "01-getting-started/quickstart/DESIGN.md",
+      "alt": "Animated comparison of normal edge insertion and Alt Force Reorder",
+      "caption": "Force Reorder expands the drop areas, making precise placement easier in dense Outliners.",
+      "capture_instructions": "Record dragging an Actor onto a target row, first showing the small normal top and bottom edge zones, then holding Alt so the entire upper and lower halves become reorder zones. Show the insertion line and final moved row.",
+      "final_asset": "assets/media/quickstart-force.gif"
+    },
+    {
+      "id": "edge-zone-comparison",
+      "kind": "image",
+      "page": "02-ordering-and-dragging/edge-zones/DESIGN.md",
+      "alt": "Before, hierarchy, and After zones in an Index Outliner row",
+      "caption": "The small top and bottom reorder regions leave the middle of a row available for normal hierarchy operations.",
+      "capture_instructions": "Capture an enlarged Outliner destination row with clearly marked top 10%, center 80%, and bottom 10% zones. Use actual Index insertion-line colors and label Before, Native Hierarchy, and After.",
+      "final_asset": "assets/media/edge-zone-comparison.png"
+    },
+    {
+      "id": "force-modifier-gestures",
+      "kind": "gif",
+      "page": "02-ordering-and-dragging/force-reorder/DESIGN.md",
+      "alt": "Animation demonstrating Force Reorder changing drop zones",
+      "caption": "The same target row switches between small edge zones and two full half-row zones while Force Reorder is held.",
+      "capture_instructions": "Record the cursor hovering the center of an Actor row during a drag, then hold Alt to show Before and After regions as you move between the upper and lower halves. Release Alt to show that the normal center hierarchy behavior returns.",
+      "final_asset": "assets/media/force-modifier-gestures.gif"
+    },
+    {
+      "id": "drag-feedback-examples",
+      "kind": "image",
+      "page": "02-ordering-and-dragging/drag-feedback/DESIGN.md",
+      "alt": "Comparison of Index Before line, After line, and hierarchy tooltip",
+      "caption": "Insertion lines show explicit ordering; descriptive drag tooltips distinguish parenting and Folder movement from before/after placement.",
+      "capture_instructions": "Capture three real hover states in a composite: a blue Before line, a different-blue After line, and a center-row hierarchy tooltip such as Move into Environment. Make each target row label visible.",
+      "final_asset": "assets/media/drag-feedback-examples.png"
+    }
+  ]
 }
