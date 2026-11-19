@@ -163,6 +163,51 @@
       "caption": "Drop-zone size and insertion colors can be adjusted without changing saved hierarchy data.",
       "capture_instructions": "Show the Index Project Settings panel with Edge Threshold set to 10%, Above and Below colors, and Force Reorder Modifier. Beside it, capture a normal Outliner row with a visible insertion line and readable target name.",
       "final_asset": "assets/media/settings-edge-zones.png"
+    },
+    {
+      "id": "wp-loaded-rows",
+      "kind": "image",
+      "page": "04-saving-and-settings/compatibility/DESIGN.md",
+      "alt": "Loaded World Partition Actors in World Outliner compared with unloaded cells",
+      "caption": "Index works on loaded Outliner rows, while unloaded World Partition content isn't an immediate drag target.",
+      "capture_instructions": "Capture a World Partition Level with loaded Actors visible in the Outliner and corresponding unloaded cells/Actors in the World Partition interface. Clearly distinguish loaded draggable rows from unloaded content.",
+      "final_asset": "assets/media/wp-loaded-rows.png"
+    },
+    {
+      "id": "architecture-overview",
+      "kind": "image",
+      "page": "05-architecture-and-support/architecture/DESIGN.md",
+      "alt": "Diagram of Index Editor module connections to native Unreal Outliner and Level state",
+      "caption": "Index separates Outliner rendering, input handling, sequence storage and saved Level metadata.",
+      "capture_instructions": "Create an architecture diagram showing the native Scene Outliner, the hidden Index sort column, the Slate input processor and insertion-line overlay, the sequence state, Unreal native hierarchy, and the Level package. Label read, reorder, and save arrows.",
+      "final_asset": "assets/media/architecture-overview.png"
+    },
+    {
+      "id": "identity-parent-tiers",
+      "kind": "image",
+      "page": "05-architecture-and-support/identity-and-reconciliation/DESIGN.md",
+      "alt": "Diagram of parent-specific ordered Actor and Folder sequences",
+      "caption": "Each Level or hierarchy parent maintains its own manual child sequence, independent of Actor and Folder labels.",
+      "capture_instructions": "Make a hierarchy diagram with a Level root containing mixed Actor and Folder children, an expanded Environment Folder with separately ordered children, and one attached Actor subtree. Indicate GUID-based identities rather than alphabetical names.",
+      "final_asset": "assets/media/identity-parent-tiers.png"
+    },
+    {
+      "id": "limits-valid-drops",
+      "kind": "image",
+      "page": "05-architecture-and-support/limitations/DESIGN.md",
+      "alt": "Supported Index World Outliner rows versus unsupported editor contexts",
+      "caption": "Index only intercepts compatible loaded Actor and Folder interactions in the standard World Outliner.",
+      "capture_instructions": "Create a two-column comparison: on the left a standard World Outliner with loaded Actors and Folders and an insertion line, on the right a Blueprint Components tree or a clearly unloaded World Partition Actor that isn't a supported drag target. Label Supported and Not Supported without inventing controls.",
+      "final_asset": "assets/media/limits-valid-drops.png"
+    },
+    {
+      "id": "troubleshooting-edge",
+      "kind": "image",
+      "page": "05-architecture-and-support/troubleshooting/DESIGN.md",
+      "alt": "Outliner drag showing hierarchy tooltip versus valid Index insertion line",
+      "caption": "A visible insertion line confirms an explicit reorder target, helping distinguish it from parenting or invalid drops.",
+      "capture_instructions": "Capture two views of the same drag: the center of a Folder row with a native Move into Folder tooltip and the top edge showing an Index Before insertion line. Include pointer positions and readable tooltips.",
+      "final_asset": "assets/media/troubleshooting-edge.png"
     }
   ]
 }
