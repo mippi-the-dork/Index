@@ -109,6 +109,60 @@
       "caption": "A duplicate block is placed after its original when both belong to the same clearly identified sibling tier.",
       "capture_instructions": "Record Ctrl+D on a single Actor and show the duplicate directly below it. Then duplicate a Folder containing nested Actors and show the copied Folder, subtree and resulting adjacent order.",
       "final_asset": "assets/media/duplicate-beside-source.gif"
+    },
+    {
+      "id": "rename-filter-sequence",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/rename-filter-sort/DESIGN.md",
+      "alt": "Animated demonstration of stable custom order across rename and filtering",
+      "caption": "Renaming and filtering do not change the underlying saved manual sibling sequence.",
+      "capture_instructions": "Record a custom-ordered Outliner, rename an Actor to something that would alphabetize differently, filter down to two rows, then clear the filter. Finally sort by another column and perform an Index reorder to restore the manual presentation.",
+      "final_asset": "assets/media/rename-filter-sequence.gif"
+    },
+    {
+      "id": "blank-space-root",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/blank-space/DESIGN.md",
+      "alt": "Dragging a nested Actor into the empty Outliner area to move it to root",
+      "caption": "A blank-space drop moves the selected hierarchy roots into the level root and places the block after existing root items.",
+      "capture_instructions": "Record an expanded Folder containing a child Actor, drag the child into the empty Outliner region below all listed rows, show the root-level insertion indicator, and release to reveal the Actor at the bottom of the level root. Keep descendants visible if moving a parent block.",
+      "final_asset": "assets/media/blank-space-root.gif"
+    },
+    {
+      "id": "deletion-sequence",
+      "kind": "image",
+      "page": "03-hierarchy-and-lifecycle/deletion/DESIGN.md",
+      "alt": "Before and after hierarchy showing stable sibling order after deletion",
+      "caption": "Removing an Actor or Folder leaves the remaining manually ordered siblings in their previous relative positions.",
+      "capture_instructions": "Capture a two-panel Before/After comparison of a custom ordered Outliner where a middle Actor has been deleted. Keep the remaining item names identical and show their order has not shifted beyond closing the removed slot.",
+      "final_asset": "assets/media/deletion-sequence.png"
+    },
+    {
+      "id": "persist-reopen",
+      "kind": "gif",
+      "page": "04-saving-and-settings/persistence/DESIGN.md",
+      "alt": "Saved Index sequence reappearing after reopening the level",
+      "caption": "A saved manual Outliner order is restored when its Level is reopened.",
+      "capture_instructions": "Record a distinct nonalphabetical Actor and Folder sequence, save the Level, switch away and reopen it, then show that the identical order remains. Include the Level name and Save operation.",
+      "final_asset": "assets/media/persist-reopen.gif"
+    },
+    {
+      "id": "undo-reorder",
+      "kind": "gif",
+      "page": "04-saving-and-settings/undo/DESIGN.md",
+      "alt": "Index reorder being undone and redone",
+      "caption": "Index ordering participates in Unreal's Undo and Redo workflow.",
+      "capture_instructions": "Record moving an Actor block before another row, pressing Ctrl+Z to restore the original sequence, and Ctrl+Y to reinstate it. Show the same Outliner rows during each step.",
+      "final_asset": "assets/media/undo-reorder.gif"
+    },
+    {
+      "id": "settings-edge-zones",
+      "kind": "image",
+      "page": "04-saving-and-settings/preferences/DESIGN.md",
+      "alt": "Index settings beside an Outliner drag zone preview",
+      "caption": "Drop-zone size and insertion colors can be adjusted without changing saved hierarchy data.",
+      "capture_instructions": "Show the Index Project Settings panel with Edge Threshold set to 10%, Above and Below colors, and Force Reorder Modifier. Beside it, capture a normal Outliner row with a visible insertion line and readable target name.",
+      "final_asset": "assets/media/settings-edge-zones.png"
     }
   ]
 }
