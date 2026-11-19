@@ -1,0 +1,213 @@
+{
+  "placeholder": "assets/media-placeholder.png",
+  "note": "A planned image is a still screenshot/diagram; gif is an animated demonstration. Capture instructions are also shown below the figure in the public documentation.",
+  "slots": [
+    {
+      "id": "overview-ordering",
+      "kind": "image",
+      "page": "01-getting-started/overview/DESIGN.md",
+      "alt": "World Outliner showing a manually ordered mixture of Actors and Folders",
+      "caption": "Manual Outliner ordering keeps labels meaningful while allowing a custom visual sequence.",
+      "capture_instructions": "Capture the standard Unreal World Outliner with an intentionally nonalphabetical order mixing at least two Actors and two Folders in one tier. Include the Index drag insertion line or custom ordering result, but do not show a separate Index application.",
+      "final_asset": "assets/media/overview-ordering.png"
+    },
+    {
+      "id": "installation-folder",
+      "kind": "image",
+      "page": "01-getting-started/installation/DESIGN.md",
+      "alt": "Index plugin directory correctly installed in an Unreal project",
+      "caption": "A correctly installed Index folder contains the plugin descriptor directly beneath the project’s Plugins directory.",
+      "capture_instructions": "Capture File Explorer showing YourProject/Plugins/Index in the address bar, with Index.uplugin, Source, Resources, Config and Doc visible. Avoid showing a nested Index/Index folder.",
+      "final_asset": "assets/media/installation-folder.png"
+    },
+    {
+      "id": "quickstart-force",
+      "kind": "gif",
+      "page": "01-getting-started/quickstart/DESIGN.md",
+      "alt": "Animated comparison of normal edge insertion and Alt Force Reorder",
+      "caption": "Force Reorder expands the drop areas, making precise placement easier in dense Outliners.",
+      "capture_instructions": "Record dragging an Actor onto a target row, first showing the small normal top and bottom edge zones, then holding Alt so the entire upper and lower halves become reorder zones. Show the insertion line and final moved row.",
+      "final_asset": "assets/media/quickstart-force.gif"
+    },
+    {
+      "id": "edge-zone-comparison",
+      "kind": "image",
+      "page": "02-ordering-and-dragging/edge-zones/DESIGN.md",
+      "alt": "Before, hierarchy, and After zones in an Index Outliner row",
+      "caption": "The small top and bottom reorder regions leave the middle of a row available for normal hierarchy operations.",
+      "capture_instructions": "Capture an enlarged Outliner destination row with clearly marked top 10%, center 80%, and bottom 10% zones. Use actual Index insertion-line colors and label Before, Native Hierarchy, and After.",
+      "final_asset": "assets/media/edge-zone-comparison.png"
+    },
+    {
+      "id": "force-modifier-gestures",
+      "kind": "gif",
+      "page": "02-ordering-and-dragging/force-reorder/DESIGN.md",
+      "alt": "Animation demonstrating Force Reorder changing drop zones",
+      "caption": "The same target row switches between small edge zones and two full half-row zones while Force Reorder is held.",
+      "capture_instructions": "Record the cursor hovering the center of an Actor row during a drag, then hold Alt to show Before and After regions as you move between the upper and lower halves. Release Alt to show that the normal center hierarchy behavior returns.",
+      "final_asset": "assets/media/force-modifier-gestures.gif"
+    },
+    {
+      "id": "drag-feedback-examples",
+      "kind": "image",
+      "page": "02-ordering-and-dragging/drag-feedback/DESIGN.md",
+      "alt": "Comparison of Index Before line, After line, and hierarchy tooltip",
+      "caption": "Insertion lines show explicit ordering; descriptive drag tooltips distinguish parenting and Folder movement from before/after placement.",
+      "capture_instructions": "Capture three real hover states in a composite: a blue Before line, a different-blue After line, and a center-row hierarchy tooltip such as Move into Environment. Make each target row label visible.",
+      "final_asset": "assets/media/drag-feedback-examples.png"
+    },
+    {
+      "id": "mixed-sibling-order",
+      "kind": "image",
+      "page": "02-ordering-and-dragging/mixed-siblings/DESIGN.md",
+      "alt": "Mixed Actor and Folder sibling order with an independent nested Folder order",
+      "caption": "Actors and Folders retain their chosen interleaved sequence within each hierarchy tier.",
+      "capture_instructions": "Capture the Outliner with Actors and Folders clearly interleaved at the root, plus one expanded Folder containing its own nonalphabetical internal order. Keep indentation and item icons readable.",
+      "final_asset": "assets/media/mixed-sibling-order.png"
+    },
+    {
+      "id": "multi-block-drag",
+      "kind": "gif",
+      "page": "02-ordering-and-dragging/multi-selection/DESIGN.md",
+      "alt": "Multi-selection drag moving several Outliner rows together in order",
+      "caption": "A multi-selection moves as one contiguous ordered block, preserving its previous relative order.",
+      "capture_instructions": "Record selecting three nonadjacent rows including at least one Folder or attached parent, dragging the selected rows together, hovering an After insertion line, and dropping. Hold the camera steady on the Outliner so the preserved order is obvious.",
+      "final_asset": "assets/media/multi-block-drag.gif"
+    },
+    {
+      "id": "parent-vs-insert",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/parenting/DESIGN.md",
+      "alt": "Comparison of native Actor parenting and Index sibling insertion",
+      "caption": "Dropping on an Actor center changes parenting, while dropping at the row edge only changes ordering.",
+      "capture_instructions": "Record two operations: drop a Lamp Actor on the center of Table and show the child attachment; undo; then drop Lamp at the lower edge of Table, showing the insertion line and unchanged parent relationship.",
+      "final_asset": "assets/media/parent-vs-insert.gif"
+    },
+    {
+      "id": "release-from-parent",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/releasing-parents/DESIGN.md",
+      "alt": "Child Actor released from attachment and placed after former parent",
+      "caption": "A child can be detached by dropping it onto its existing parent, moving it to the next appropriate hierarchy tier.",
+      "capture_instructions": "Record an attached Actor being dropped onto the center of its current parent, show the tooltip and resulting outdented row immediately after the parent. Include a similar nested Folder example if possible.",
+      "final_asset": "assets/media/release-from-parent.gif"
+    },
+    {
+      "id": "new-items-top",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/new-items/DESIGN.md",
+      "alt": "New Actors and Folders appearing above existing local siblings",
+      "caption": "Newly created rows enter at the top of their local hierarchy while previously ordered siblings stay unchanged.",
+      "capture_instructions": "Record a custom-ordered root, create a new Actor and show its top-of-tier placement. Then create a Folder inside an existing Folder and show the local insertion without changing the root order.",
+      "final_asset": "assets/media/new-items-top.gif"
+    },
+    {
+      "id": "duplicate-beside-source",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/duplication/DESIGN.md",
+      "alt": "Actor and Folder duplicates adjacent to their originals",
+      "caption": "A duplicate block is placed after its original when both belong to the same clearly identified sibling tier.",
+      "capture_instructions": "Record Ctrl+D on a single Actor and show the duplicate directly below it. Then duplicate a Folder containing nested Actors and show the copied Folder, subtree and resulting adjacent order.",
+      "final_asset": "assets/media/duplicate-beside-source.gif"
+    },
+    {
+      "id": "rename-filter-sequence",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/rename-filter-sort/DESIGN.md",
+      "alt": "Animated demonstration of stable custom order across rename and filtering",
+      "caption": "Renaming and filtering do not change the underlying saved manual sibling sequence.",
+      "capture_instructions": "Record a custom-ordered Outliner, rename an Actor to something that would alphabetize differently, filter down to two rows, then clear the filter. Finally sort by another column and perform an Index reorder to restore the manual presentation.",
+      "final_asset": "assets/media/rename-filter-sequence.gif"
+    },
+    {
+      "id": "blank-space-root",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/blank-space/DESIGN.md",
+      "alt": "Dragging a nested Actor into the empty Outliner area to move it to root",
+      "caption": "A blank-space drop moves the selected hierarchy roots into the level root and places the block after existing root items.",
+      "capture_instructions": "Record an expanded Folder containing a child Actor, drag the child into the empty Outliner region below all listed rows, show the root-level insertion indicator, and release to reveal the Actor at the bottom of the level root. Keep descendants visible if moving a parent block.",
+      "final_asset": "assets/media/blank-space-root.gif"
+    },
+    {
+      "id": "deletion-sequence",
+      "kind": "image",
+      "page": "03-hierarchy-and-lifecycle/deletion/DESIGN.md",
+      "alt": "Before and after hierarchy showing stable sibling order after deletion",
+      "caption": "Removing an Actor or Folder leaves the remaining manually ordered siblings in their previous relative positions.",
+      "capture_instructions": "Capture a two-panel Before/After comparison of a custom ordered Outliner where a middle Actor has been deleted. Keep the remaining item names identical and show their order has not shifted beyond closing the removed slot.",
+      "final_asset": "assets/media/deletion-sequence.png"
+    },
+    {
+      "id": "persist-reopen",
+      "kind": "gif",
+      "page": "04-saving-and-settings/persistence/DESIGN.md",
+      "alt": "Saved Index sequence reappearing after reopening the level",
+      "caption": "A saved manual Outliner order is restored when its Level is reopened.",
+      "capture_instructions": "Record a distinct nonalphabetical Actor and Folder sequence, save the Level, switch away and reopen it, then show that the identical order remains. Include the Level name and Save operation.",
+      "final_asset": "assets/media/persist-reopen.gif"
+    },
+    {
+      "id": "undo-reorder",
+      "kind": "gif",
+      "page": "04-saving-and-settings/undo/DESIGN.md",
+      "alt": "Index reorder being undone and redone",
+      "caption": "Index ordering participates in Unreal's Undo and Redo workflow.",
+      "capture_instructions": "Record moving an Actor block before another row, pressing Ctrl+Z to restore the original sequence, and Ctrl+Y to reinstate it. Show the same Outliner rows during each step.",
+      "final_asset": "assets/media/undo-reorder.gif"
+    },
+    {
+      "id": "settings-edge-zones",
+      "kind": "image",
+      "page": "04-saving-and-settings/preferences/DESIGN.md",
+      "alt": "Index settings beside an Outliner drag zone preview",
+      "caption": "Drop-zone size and insertion colors can be adjusted without changing saved hierarchy data.",
+      "capture_instructions": "Show the Index Project Settings panel with Edge Threshold set to 10%, Above and Below colors, and Force Reorder Modifier. Beside it, capture a normal Outliner row with a visible insertion line and readable target name.",
+      "final_asset": "assets/media/settings-edge-zones.png"
+    },
+    {
+      "id": "wp-loaded-rows",
+      "kind": "image",
+      "page": "04-saving-and-settings/compatibility/DESIGN.md",
+      "alt": "Loaded World Partition Actors in World Outliner compared with unloaded cells",
+      "caption": "Index works on loaded Outliner rows, while unloaded World Partition content isn't an immediate drag target.",
+      "capture_instructions": "Capture a World Partition Level with loaded Actors visible in the Outliner and corresponding unloaded cells/Actors in the World Partition interface. Clearly distinguish loaded draggable rows from unloaded content.",
+      "final_asset": "assets/media/wp-loaded-rows.png"
+    },
+    {
+      "id": "architecture-overview",
+      "kind": "image",
+      "page": "05-architecture-and-support/architecture/DESIGN.md",
+      "alt": "Diagram of Index Editor module connections to native Unreal Outliner and Level state",
+      "caption": "Index separates Outliner rendering, input handling, sequence storage and saved Level metadata.",
+      "capture_instructions": "Create an architecture diagram showing the native Scene Outliner, the hidden Index sort column, the Slate input processor and insertion-line overlay, the sequence state, Unreal native hierarchy, and the Level package. Label read, reorder, and save arrows.",
+      "final_asset": "assets/media/architecture-overview.png"
+    },
+    {
+      "id": "identity-parent-tiers",
+      "kind": "image",
+      "page": "05-architecture-and-support/identity-and-reconciliation/DESIGN.md",
+      "alt": "Diagram of parent-specific ordered Actor and Folder sequences",
+      "caption": "Each Level or hierarchy parent maintains its own manual child sequence, independent of Actor and Folder labels.",
+      "capture_instructions": "Make a hierarchy diagram with a Level root containing mixed Actor and Folder children, an expanded Environment Folder with separately ordered children, and one attached Actor subtree. Indicate GUID-based identities rather than alphabetical names.",
+      "final_asset": "assets/media/identity-parent-tiers.png"
+    },
+    {
+      "id": "limits-valid-drops",
+      "kind": "image",
+      "page": "05-architecture-and-support/limitations/DESIGN.md",
+      "alt": "Supported Index World Outliner rows versus unsupported editor contexts",
+      "caption": "Index only intercepts compatible loaded Actor and Folder interactions in the standard World Outliner.",
+      "capture_instructions": "Create a two-column comparison: on the left a standard World Outliner with loaded Actors and Folders and an insertion line, on the right a Blueprint Components tree or a clearly unloaded World Partition Actor that isn't a supported drag target. Label Supported and Not Supported without inventing controls.",
+      "final_asset": "assets/media/limits-valid-drops.png"
+    },
+    {
+      "id": "troubleshooting-edge",
+      "kind": "image",
+      "page": "05-architecture-and-support/troubleshooting/DESIGN.md",
+      "alt": "Outliner drag showing hierarchy tooltip versus valid Index insertion line",
+      "caption": "A visible insertion line confirms an explicit reorder target, helping distinguish it from parenting or invalid drops.",
+      "capture_instructions": "Capture two views of the same drag: the center of a Folder row with a native Move into Folder tooltip and the top edge showing an Index Before insertion line. Include pointer positions and readable tooltips.",
+      "final_asset": "assets/media/troubleshooting-edge.png"
+    }
+  ]
+}
