@@ -55,6 +55,60 @@
       "caption": "Insertion lines show explicit ordering; descriptive drag tooltips distinguish parenting and Folder movement from before/after placement.",
       "capture_instructions": "Capture three real hover states in a composite: a blue Before line, a different-blue After line, and a center-row hierarchy tooltip such as Move into Environment. Make each target row label visible.",
       "final_asset": "assets/media/drag-feedback-examples.png"
+    },
+    {
+      "id": "mixed-sibling-order",
+      "kind": "image",
+      "page": "02-ordering-and-dragging/mixed-siblings/DESIGN.md",
+      "alt": "Mixed Actor and Folder sibling order with an independent nested Folder order",
+      "caption": "Actors and Folders retain their chosen interleaved sequence within each hierarchy tier.",
+      "capture_instructions": "Capture the Outliner with Actors and Folders clearly interleaved at the root, plus one expanded Folder containing its own nonalphabetical internal order. Keep indentation and item icons readable.",
+      "final_asset": "assets/media/mixed-sibling-order.png"
+    },
+    {
+      "id": "multi-block-drag",
+      "kind": "gif",
+      "page": "02-ordering-and-dragging/multi-selection/DESIGN.md",
+      "alt": "Multi-selection drag moving several Outliner rows together in order",
+      "caption": "A multi-selection moves as one contiguous ordered block, preserving its previous relative order.",
+      "capture_instructions": "Record selecting three nonadjacent rows including at least one Folder or attached parent, dragging the selected rows together, hovering an After insertion line, and dropping. Hold the camera steady on the Outliner so the preserved order is obvious.",
+      "final_asset": "assets/media/multi-block-drag.gif"
+    },
+    {
+      "id": "parent-vs-insert",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/parenting/DESIGN.md",
+      "alt": "Comparison of native Actor parenting and Index sibling insertion",
+      "caption": "Dropping on an Actor center changes parenting, while dropping at the row edge only changes ordering.",
+      "capture_instructions": "Record two operations: drop a Lamp Actor on the center of Table and show the child attachment; undo; then drop Lamp at the lower edge of Table, showing the insertion line and unchanged parent relationship.",
+      "final_asset": "assets/media/parent-vs-insert.gif"
+    },
+    {
+      "id": "release-from-parent",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/releasing-parents/DESIGN.md",
+      "alt": "Child Actor released from attachment and placed after former parent",
+      "caption": "A child can be detached by dropping it onto its existing parent, moving it to the next appropriate hierarchy tier.",
+      "capture_instructions": "Record an attached Actor being dropped onto the center of its current parent, show the tooltip and resulting outdented row immediately after the parent. Include a similar nested Folder example if possible.",
+      "final_asset": "assets/media/release-from-parent.gif"
+    },
+    {
+      "id": "new-items-top",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/new-items/DESIGN.md",
+      "alt": "New Actors and Folders appearing above existing local siblings",
+      "caption": "Newly created rows enter at the top of their local hierarchy while previously ordered siblings stay unchanged.",
+      "capture_instructions": "Record a custom-ordered root, create a new Actor and show its top-of-tier placement. Then create a Folder inside an existing Folder and show the local insertion without changing the root order.",
+      "final_asset": "assets/media/new-items-top.gif"
+    },
+    {
+      "id": "duplicate-beside-source",
+      "kind": "gif",
+      "page": "03-hierarchy-and-lifecycle/duplication/DESIGN.md",
+      "alt": "Actor and Folder duplicates adjacent to their originals",
+      "caption": "A duplicate block is placed after its original when both belong to the same clearly identified sibling tier.",
+      "capture_instructions": "Record Ctrl+D on a single Actor and show the duplicate directly below it. Then duplicate a Folder containing nested Actors and show the copied Folder, subtree and resulting adjacent order.",
+      "final_asset": "assets/media/duplicate-beside-source.gif"
     }
   ]
 }
