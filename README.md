@@ -1,150 +1,139 @@
 # Index
 
-### Put your World Outliner in the order that makes sense to you.
+**Persistent World Outliner Ordering for Unreal Engine**
 
-**Persistent manual Actor and Folder ordering for Unreal Engine's World Outliner.**
+**Your hierarchy should be organized by how you work—not by what your Actors are named.**
 
-Unreal's World Outliner is great at showing what's in a level. But the order you *want* to work in isn't always alphabetical. You shouldn't need names like `01_Gameplay`, `02_Environment` and `03_Lighting` just to keep related content where you want it.
+Index gives you **manual, persistent control over Actor and Folder order** inside Unreal Engine's familiar World Outliner. Arrange your level without number prefixes, alphabetical compromises or a separate organizational tool. Drag items into place, preserve their real hierarchy, and save the order with the Level.
 
-**Index gives you direct control over that order.** Drag Actors and Folders into place, keep their real names, and save the arrangement with your level. It works inside the familiar World Outliner—no separate organizer window or replacement hierarchy.
+[![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.8.x-black?logo=unrealengine)](https://www.unrealengine.com/) ![Platform](https://img.shields.io/badge/Platform-Win64-blue) ![Editor Only](https://img.shields.io/badge/Plugin-Editor%20Only-217346) ![Version](https://img.shields.io/badge/Index-v1.0.0-blue) [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-![Index — persistent manual World Outliner ordering](Doc/Images/Index-Hero.png)
-
-> ### 📖 [**Explore the Index Documentation Website**](https://mippi-the-dork.github.io/Index/)
->
-> Everything you need to install and use Index, from your first reorder to multi-selection, hierarchy operations, saving, Project Settings, and technical implementation.
->
-> **[Getting Started](https://mippi-the-dork.github.io/Index/?page=01-getting-started/README.md)** · **[Ordering and Dragging](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging/README.md)** · **[Full Feature Reference](https://mippi-the-dork.github.io/Index/?page=03-hierarchy-and-lifecycle/README.md)** · **[Technical Documentation](https://mippi-the-dork.github.io/Index/?page=05-architecture-and-support/README.md)**
+<p align="center">
+  <img src="Doc/Images/Index-Hero.png" alt="Index manual Actor and Folder ordering in Unreal Engine's World Outliner" width="100%">
+</p>
 
 ---
 
-## Your level. Your order.
+## The World Outliner should follow your workflow
 
-Imagine an Outliner full of gameplay Actors, lights, environmental Folders, and volumes. Alphabetical ordering scatters related work throughout the hierarchy. Number prefixes may help today, but they become another naming convention to maintain.
+A level's most important Actors aren't necessarily first alphabetically. You might want gameplay systems above environmental content, lighting beside the spaces it affects, or frequently edited objects near the top. Without manual ordering, teams often resort to naming tricks like `01_Gameplay` and `02_Environment`.
 
-Index separates **what something is named** from **where it belongs**.
+**Index lets names describe what things are, while you decide where they belong.**
 
-For example, you might want:
+- **Organize without renaming.** Put Actors and Folders in the sequence that makes sense, regardless of their labels.
+- **Stay inside the native Outliner.** Reorder with familiar drag/drop gestures and clear Before/After insertion lines.
+- **Move meaningful groups.** Reorder multiple selected items as one block, preserving their relative order and attached descendants.
+- **Keep Unreal's hierarchy intact.** Ordinary Actor parenting and Folder movement remain available.
+- **Save the result.** Manual order is stored with the Level and survives saving and reopening the project.
 
-```text
-BP_PlayerStart
-Gameplay/
-Environment/
-DirectionalLight
-PostProcessVolume
-Audio/
-BP_Checkpoint
-```
+<p align="center">
+  <img src="Doc/Images/Index-Insert-Above.png" alt="Index displaying an insertion line above the destination World Outliner row" width="860">
+</p>
 
-You choose the sequence, and each Folder or attached Actor hierarchy can have its own order. Rename an Actor later without losing its position.
+## Explore the documentation
 
-**The result:** a World Outliner organized for how your team builds levels, not for how strings sort.
+> ### [**Index Documentation — Full User Guide and Technical Reference**](https://mippi-the-dork.github.io/Index/)
+>
+> **Everything you need to get Index working and make the most of it.** Learn the insertion gestures, organize complex hierarchies, understand saving and Undo, configure preferences, or inspect the underlying Unreal Editor implementation.
+>
+> **[Get Started](https://mippi-the-dork.github.io/Index/?page=01-getting-started%2FREADME.md)** · **[Ordering and Dragging](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging%2FREADME.md)** · **[Saving & Settings](https://mippi-the-dork.github.io/Index/?page=04-saving-and-settings%2FREADME.md)** · **[Troubleshooting](https://mippi-the-dork.github.io/Index/?page=05-architecture-and-support%2Ftroubleshooting%2FDESIGN.md)**
 
-## Reordering feels like part of Unreal
+The README is an overview of what Index offers. **The [documentation website](https://mippi-the-dork.github.io/Index/) is the maintained reference for exact interaction behavior, installation, examples and technical details.**
 
-![Reordering Actors and Folders using Index](Doc/Images/Index-Reordering.gif)
+## Manual ordering, without changing your hierarchy
 
-Drag a compatible Actor or Folder toward the **top or bottom edge** of another row. A full-width insertion line shows where the item will land. Release to place it **before or after** the target.
+Index adds an ordering layer to the standard World Outliner. Each compatible sibling tier can have its own arrangement—including a mixture of Actors and Folders—without changing what is attached to what.
 
-The **center** of the row still supports Unreal's normal hierarchy behavior, such as parenting Actors or moving items into Folders. Index helps you distinguish ordering from structural changes instead of replacing native workflows.
-
-Want a larger target? Hold **Alt** by default while dragging:
-
-![Index Force Reorder demonstration](Doc/Images/Index-Force-Reorder.gif)
-
-The whole row becomes two simple zones: **upper half = Before**, **lower half = After**. The modifier, edge-zone size, and insertion-line colors are configurable.
-
-**[See exactly how drag placement works](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging/edge-zones/DESIGN.md)** · **[Force Reorder guide](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging/force-reorder/DESIGN.md)**
-
-## Built for real level hierarchies
-
-Index isn't limited to moving one Actor at a time.
-
-- **Actors and Folders together.** Interleave them in the same ordered sibling tier wherever Unreal allows it.
-- **Multi-selection as a block.** Move several rows together while preserving their existing visual order.
-- **Hierarchy-aware movement.** Parent Actors and Folders carry their descendants without flattening the hierarchy.
-- **Native parenting and detaching.** Keep ordinary drag-to-parent behavior, plus convenient release-from-parent gestures.
-- **Predictable new content.** New items are integrated at the top of their local tier; duplicates normally appear immediately after their source when the relationship is clear.
-- **Rename and filter safely.** Changing a label or filtering the Outliner doesn't erase the underlying manual sequence.
-- **Undo and Redo.** Supported ordering and hierarchy changes participate in Unreal's editor transaction workflow.
-- **Persistent order.** Save the level and retain your organization after switching levels or restarting the editor.
-
-These behaviors are designed around existing Unreal Actor and Folder relationships—not a parallel organization system you have to maintain.
-
-**[Multi-Selection](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging/multi-selection/DESIGN.md)** · **[Parenting and Folders](https://mippi-the-dork.github.io/Index/?page=03-hierarchy-and-lifecycle/parenting/DESIGN.md)** · **[Duplication](https://mippi-the-dork.github.io/Index/?page=03-hierarchy-and-lifecycle/duplication/DESIGN.md)**
-
-## Save the organization, not another asset
-
-Index stores the manual hierarchy sequence in the **level package's metadata**. It doesn't create extra Content Browser assets or sidecar files.
-
-Your saved order is independent of Actor/Folder display names. Index also respects Unreal's existing attachment and Folder structure.
-
-**For teams using Perforce or One File Per Actor:** an Index reorder can mark the **level package** dirty because that's where the order is saved. Make sure that package is saved and included in source control when sharing the arrangement.
-
-**[How saving works](https://mippi-the-dork.github.io/Index/?page=04-saving-and-settings/persistence/DESIGN.md)** · **[Undo and Redo](https://mippi-the-dork.github.io/Index/?page=04-saving-and-settings/undo/DESIGN.md)** · **[Technical persistence details](https://mippi-the-dork.github.io/Index/?page=04-saving-and-settings/persistence/TECHNICAL.md)**
-
-## Documentation: from first drag to engine internals
-
-The [**Index Documentation Website**](https://mippi-the-dork.github.io/Index/) is the primary resource for usage instructions, settings, troubleshooting, examples, and implementation details. Every major topic has a **Design** guide for users and a **Technical** guide for developers.
-
-| Looking for… | Go here |
+| Capability | What you can do |
 | --- | --- |
-| Install Index and make your first reorder | [Getting Started](https://mippi-the-dork.github.io/Index/?page=01-getting-started/README.md) |
-| Before/After zones, Force Reorder, and insertion feedback | [Ordering and Dragging](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging/README.md) |
-| Moving hierarchies, duplication, new items, and deletion | [Hierarchy and Lifecycle](https://mippi-the-dork.github.io/Index/?page=03-hierarchy-and-lifecycle/README.md) |
-| Project Settings, persistence, Undo/Redo, and World Partition | [Saving and Settings](https://mippi-the-dork.github.io/Index/?page=04-saving-and-settings/README.md) |
-| Internal architecture, stable IDs, and source behavior | [Architecture and Support](https://mippi-the-dork.github.io/Index/?page=05-architecture-and-support/README.md) |
-| Common problems and fixes | [Troubleshooting](https://mippi-the-dork.github.io/Index/?page=05-architecture-and-support/troubleshooting/DESIGN.md) |
-| Current features and possible future direction | [Roadmap](https://mippi-the-dork.github.io/Index/?page=ROADMAP.md) |
+| **[Before / After Insertion](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging%2Fedge-zones%2FDESIGN.md)** | Drag to a row's upper or lower edge to insert precisely before or after another item. |
+| **[Force Reorder](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging%2Fforce-reorder%2FDESIGN.md)** | Hold Alt by default to expand the insertion zones to the full upper and lower halves of a row. |
+| **[Mixed Actors and Folders](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging%2Fmixed-siblings%2FDESIGN.md)** | Interleave Actor and Folder rows wherever Unreal permits, with a separate order for each child tier. |
+| **[Multi-Selection](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging%2Fmulti-selection%2FDESIGN.md)** | Move several selected items together while retaining their relative visual order. |
+| **[Hierarchy-Aware Dragging](https://mippi-the-dork.github.io/Index/?page=03-hierarchy-and-lifecycle%2Fparenting%2FDESIGN.md)** | Keep native parenting and Folder movement; release a child from its parent with the supported gesture. |
+| **[New Items and Duplication](https://mippi-the-dork.github.io/Index/?page=03-hierarchy-and-lifecycle%2Fduplication%2FDESIGN.md)** | Place new content at the top of its local tier and duplicates beside their sources when the relationship is clear. |
+| **[Saved Ordering and Undo](https://mippi-the-dork.github.io/Index/?page=04-saving-and-settings%2Fpersistence%2FDESIGN.md)** | Retain a Level's manual order across editor sessions and use Unreal's native Undo/Redo workflow. |
+| **[Configurable Feedback](https://mippi-the-dork.github.io/Index/?page=04-saving-and-settings%2Fpreferences%2FDESIGN.md)** | Customize insertion-line colors, edge thresholds and the Force Reorder modifier. |
 
-> **New to Index?** Start with [**Your First Reorder**](https://mippi-the-dork.github.io/Index/?page=01-getting-started/quickstart/DESIGN.md). It explains the drag gestures, how to recognize a valid insertion, and how to save the result.
+Index changes **the order you see in the Outliner**, not Actor transforms or gameplay behavior.
 
-## Availability and compatibility
+## Useful in real production workflows
 
-**Current plugin version:** **1.0.0** · **Unreal Engine 5.8** · **Windows 64-bit** · **Editor-only**
+### Organize a level without naming tricks
 
-The plugin descriptor targets **UE 5.8.0**; the project's existing release documentation lists **5.8.2** as its release target. Use a precompiled package built for your exact Unreal Engine version, or compile the source against your installed engine. Compatibility with other engine versions and platforms is not implied.
+Keep `BP_PlayerStart`, `Gameplay`, `Environment` and your key volumes in the order your team expects to find them. Renaming or filtering the Outliner doesn't intentionally replace that saved sequence.
 
-- **[GitHub Releases](https://github.com/mippi-the-dork/Index/releases)** — precompiled packages when published.
-- **[GitHub Source](https://github.com/mippi-the-dork/Index)** — complete plugin source.
-- **[Installation Guide](https://mippi-the-dork.github.io/Index/?page=01-getting-started/installation/DESIGN.md)** — installation methods, building from source, and updating.
+<p align="center">
+  <img src="Doc/Images/Index-Reordering.gif" alt="Index moving Actors and Folders to chosen positions in the Unreal Engine World Outliner" width="800">
+</p>
 
-Index adds no runtime Actors, Components, or gameplay systems. Its functionality stays in the Unreal Editor.
+### Reorder quickly without accidental parenting
 
-## What Index doesn't do
+Drop near the top or bottom edge for a Before/After insertion. The center of the row keeps Unreal's normal hierarchy action. When you need a larger target, hold **Alt** (by default) for upper-half and lower-half insertion zones.
 
-Index is intentionally focused on **manual organization of the standard Editor World Outliner**. It doesn't:
+<p align="center">
+  <img src="Doc/Images/Index-Force-Reorder.gif" alt="Index Force Reorder using enlarged drop zones" width="800">
+</p>
 
-- Automatically decide how to organize or alphabetize your hierarchy.
-- Rename Actors or Folders, change Actor transforms, or affect gameplay.
-- Replace Unreal's attachment system or native Folder relationships.
-- Reorder Blueprint Component trees, specialized custom Outliners, or runtime/PIE hierarchies.
-- Reorder **unloaded** World Partition Actors before they're loaded into editable Outliner rows.
-- Perform custom reordering **across different levels**.
-- Add Content Browser assets, runtime hierarchy systems, or packaged-game behavior.
+### Move related content together
 
-Some complex native hierarchy operations—particularly duplication—can require multiple Undo/Redo steps because Unreal's action and Index's final placement may be separate transactions.
+Select several Actors and Folders, then move them as one ordered block. If a selected parent has descendants, Index keeps that subtree intact rather than flattening it into the destination tier.
 
-**[Supported behavior and limitations](https://mippi-the-dork.github.io/Index/?page=05-architecture-and-support/limitations/DESIGN.md)**
+[**Learn about multi-selection and hierarchy operations →**](https://mippi-the-dork.github.io/Index/?page=02-ordering-and-dragging%2Fmulti-selection%2FDESIGN.md)
 
-## Issues, requests, and contributions
+### Keep your organization after restarting
 
-**Reporting an issue:** [Open an issue on GitHub](https://github.com/mippi-the-dork/Index/issues). Include your Index and Unreal versions, Windows version, installation method, World Partition/source-control context, steps to reproduce, and the **hierarchy before and after** the operation. Screenshots or a short recording are especially useful for drag/drop problems.
+Index saves the manual sequence in the **Level package's metadata**, without sidecar files or additional Content Browser assets. Undo/Redo integrates with Unreal's Editor transactions.
 
-**Feature requests:** [Suggest an improvement through GitHub Issues](https://github.com/mippi-the-dork/Index/issues). Describe the workflow problem and what result would help—not just a particular implementation. That makes it easier to evaluate whether the feature belongs in Index.
+For **One File Per Actor and Perforce**, remember that a reorder may dirty the **Level package** even when the Actors themselves are stored in external packages. Check out and save the appropriate Level when sharing its order.
 
-**Contributing:** Pull requests are welcome. For significant changes, please open an Issue first to discuss the intended behavior and avoid conflicting work. Contributions should preserve Index's focus on native World Outliner hierarchy ordering.
+[**Learn how Level saving, source control and Undo work →**](https://mippi-the-dork.github.io/Index/?page=04-saving-and-settings%2Fpersistence%2FDESIGN.md)
+
+## Get Index
+
+**Index v1.0.0** targets **Unreal Engine 5.8.x on Windows 64-bit** and runs in the **Editor only**.
+
+The plugin descriptor specifies UE **5.8.0**, while the existing release documentation identifies **5.8.2** as its target. Use a release built for your exact engine version, or compile the source against your installation. Additional platforms or engine versions should not be assumed compatible.
+
+For most users, choose a compatible prebuilt release or install through Fab if available. Developers can also build from the complete source in this repository.
+
+**[Download GitHub Releases](https://github.com/mippi-the-dork/Index/releases)** · **[Installation Guide](https://mippi-the-dork.github.io/Index/?page=01-getting-started%2Finstallation%2FDESIGN.md)** · **[Your First Reorder](https://mippi-the-dork.github.io/Index/?page=01-getting-started%2Fquickstart%2FDESIGN.md)**
+
+## Important limitations
+
+Index is an **Editor hierarchy organization tool**, not a runtime system, cross-Level organizer or replacement for Unreal's native Actor/Folder hierarchy.
+
+- **Loaded Actors and Folders only.** Unloaded World Partition Actors must be loaded before they can be targeted by manual Outliner dragging.
+- **Compatible sibling tiers only.** Index doesn't provide custom manual reordering across different Levels or bypass Unreal's valid parent relationships.
+- **Standard World Outliner only.** Blueprint Component trees, specialized Outliners and PIE/runtime hierarchy lists are outside its editing scope.
+- **Manual organization, not automatic sorting.** Index doesn't rename or automatically classify content, modify Actor transforms, or alter gameplay.
+- **Level-owned ordering.** Index changes can dirty the Level package. Saving only External Actor packages may not preserve its sequence; validate source-control workflows in your own project.
+- **Native Undo boundaries apply.** Complex hierarchy operations, particularly duplication, can take more than one Undo/Redo step.
+
+For full details, see [Supported Behavior and Limitations](https://mippi-the-dork.github.io/Index/?page=05-architecture-and-support%2Flimitations%2FDESIGN.md) and [Troubleshooting](https://mippi-the-dork.github.io/Index/?page=05-architecture-and-support%2Ftroubleshooting%2FDESIGN.md).
+
+## What's next?
+
+Index v1.0.0 establishes **persistent manual Actor and Folder ordering**, with native drag/drop behavior, hierarchy-aware movement and Level-based saving.
+
+Future improvements haven't been assigned a release version or committed scope yet. The roadmap records the current foundation and questions worth evaluating, without presenting them as announced features.
+
+[**View the Index Roadmap →**](https://mippi-the-dork.github.io/Index/?page=ROADMAP.md)
+
+## Issues, feature requests and contributions
+
+Found a bug? Please [open an issue](https://github.com/mippi-the-dork/Index/issues) with your Index/Unreal versions, installation method, affected hierarchy before and after, steps to reproduce and screenshots, video or Output Log excerpts where helpful. Include World Partition and source-control context if relevant.
+
+Have an idea? [Submit a feature request](https://github.com/mippi-the-dork/Index/issues) describing the workflow problem and outcome you'd like, so the feature can be evaluated within Index's scope.
+
+**Pull requests are welcome.** For major changes, open an issue first to discuss the intended behavior. Index aims to remain focused, predictable and native to the World Outliner.
 
 ## License
 
-Index is distributed under the **MIT License**. See [LICENSE](LICENSE) for the full license terms.
+Index is distributed under the **MIT License**. See [LICENSE](LICENSE) for the full terms.
 
 ---
 
-### Stop naming things just to sort them.
+**Index is created by Mippi the Dork.**
 
-Let Actor and Folder names describe **what they are**. Let Index control **where they appear**.
-
-**[Read the Documentation](https://mippi-the-dork.github.io/Index/)** · **[Get Index](https://github.com/mippi-the-dork/Index/releases)** · **[Report an Issue](https://github.com/mippi-the-dork/Index/issues)**
-
-*Created by Mippi the Dork.*
+**[Explore the Documentation](https://mippi-the-dork.github.io/Index/)** · **[Get Index](https://github.com/mippi-the-dork/Index/releases)** · **[Report an Issue](https://github.com/mippi-the-dork/Index/issues)**
